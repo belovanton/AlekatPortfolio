@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_portfolio_index>
+        <reference name="head">
+
+        </reference>
+        <reference name="content">
+            <block type="komplizierte_alekatportfolio/adminhtml_portfolio" name="portfolio.grid_container"/>
+        </reference>
+    </adminhtml_portfolio_index>
+    <adminhtml_portfolio_new>
+        <update handle="adminhtml_portfolio_edit"/>
+    </adminhtml_portfolio_new>
+
+    <adminhtml_portfolio_edit>
+        <reference name="content">
+            <block type="komplizierte_alekatportfolio/adminhtml_edit" name="quotes.edit"/>
+        </reference>
+    </adminhtml_portfolio_edit>
+</layout>
