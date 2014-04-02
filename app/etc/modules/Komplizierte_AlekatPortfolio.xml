@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Komplizierte_AlekatPortfolio>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Komplizierte_AlekatPortfolio>
+    </modules>
+</config>

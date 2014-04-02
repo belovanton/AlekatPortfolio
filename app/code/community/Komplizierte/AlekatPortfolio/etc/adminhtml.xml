@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+<menu>
+    <komplizierte_alekat translate="title" module="komplizierte_alekatportfolio">
+        <title>Modules</title>
+        <sort_order>60</sort_order>
+        <children>
+            <alekatportfolio translate="title" module="komplizierte_alekatportfolio">
+                <title>Portfolio</title>
+                <action>adminhtml/portfolio</action>
+            </alekatportfolio>
+        </children>
+    </komplizierte_alekat>
+</menu>
+</config>

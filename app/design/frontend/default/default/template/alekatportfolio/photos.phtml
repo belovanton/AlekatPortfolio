@@ -1,0 +1,28 @@
+<?php $data=$this->getPortfolio();?>
+<?php
+
+    $images = (array)$this->getImages();
+    if(count($images)>0)
+        $firstImage = array_shift($images);
+?>
+
+
+<?php $helper=Mage::helper('komplizierte_alekatportfolio');?>
+    <div class="project-photo img-rounded">
+        <?php if(count($images)>0) : ?>
+        <div class="photo-main">
+            <a href="<?php echo $firstImage->getUrl()?>" rel="prettyPhoto[<?php echo md5($data->getTitle())?>]" title="<?php echo $data->getTitle()?>">
+                <img src="<?php echo $helper->imageResize($firstImage->getUrl(true), 290, 290)?>" />
+            </a>
+        </div>
+        <?php endif; ?>
+        <ul class="list-unstyled list-inline">
+            <?php if(count($images) > 0): $count=0; foreach($images as $image) : ?>
+            <li<?php if($count>2) echo ' style="display:none;"'; ?>>
+                <a href="<?php echo $image->getUrl()?>" rel="prettyPhoto[<?php echo md5($data->getTitle())?>]" title="<?php echo $data->getTitle()?>">
+                    <img src="<?php echo $helper->imageResize($image->getUrl(true), 83, 83)?>" />
+                </a>
+            </li>
+            <?php $count++; endforeach; endif; ?>
+        </ul>
+    </div>

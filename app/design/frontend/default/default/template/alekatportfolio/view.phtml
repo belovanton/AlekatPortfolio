@@ -1,0 +1,44 @@
+<?php $data = $this->getPortfolios(); ?>
+<?php
+    $images=$this->getImages();
+    $imagesArr = array();
+    foreach($images as $image) {
+        $imagesArr[$image->getPortfolio_id()][] = $image;
+    }
+?>
+<?php $i=0;?>
+<?php foreach ($data as $portfolio): ?>
+    <article class="project row">
+        <div class="col-md-8 <?php if($i%2==0):?>col-md-push-4<?php endif?>">
+
+            <div class="field project-object label-inline"><label> Object: </label>
+                <div class="field-items">
+                    <div class="field-item"><?php echo $portfolio->getObject(); ?></div>
+                </div>
+            </div>
+            <div class="field project-address label-inline"><label> Address: </label>
+                <div class="field-items">
+                    <div class="field-item"><?php echo $portfolio->getAddress(); ?></div>
+                </div>
+            </div>
+            <div class="field discr">
+                <p><strong>Mission: </strong> <?php echo $portfolio->getMission(); ?>
+                <p><strong>Cost: </strong> <?php echo $portfolio->getCost(); ?>
+                <p><strong>Comment: </strong> <?php echo $portfolio->getComment(); ?>
+            </div>
+
+
+
+
+        </div>
+        <div class="col-md-4 <?php if($i%2==0):?>col-md-pull-8<?php endif?>">
+            <?php echo $this->getPhotos($portfolio, isset($imagesArr[$portfolio->getId()]) ? $imagesArr[$portfolio->getId()] : null)?>
+        </div>
+    </article>
+    <?php $i++;?>
+<?php endforeach ?>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        $("a[rel^='prettyPhoto']").prettyPhoto();
+    });
+</script>

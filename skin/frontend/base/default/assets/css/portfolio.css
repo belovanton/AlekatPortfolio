@@ -1,0 +1,91 @@
+.project {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+.col-md-push-4 {
+    left: 33.33333333%;
+    float: left !important;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px 20px;
+}
+
+.col-md-8 {
+    width: 66.66666667%;
+    float: right;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px 20px;
+}
+
+.col-md-pull-8 {
+    right: 66.66666667%;
+    float: left;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px 20px;
+}
+
+.col-md-4 {
+    width: 33.33333333%;
+    float: right !important;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px 20px;
+}
+
+.project-photo ul.list-inline {
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.list-inline, .list-unstyled {
+    padding-left: 0;
+    list-style: none !important;
+}
+
+.project-photo ul.list-inline li {
+    padding: 0 1px 1px;
+    float: left;
+
+}
+
+.img-rounded img {
+    border-radius: 4px;
+}
+
+.project-photo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.field.label-inline label {
+    float: left;
+    margin-right: 8px;
+}
+
+.project label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project .field-items {
+    font-size: 18px;
+}
+
+.project .project-address {
+    margin-bottom: 20px;
+}
